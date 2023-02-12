@@ -263,6 +263,7 @@ header{
   border-radius: 15px;
   font-family: 'Roboto';
   font-size: medium;
+  transition: 0.3s;
 }
 
 .btnnames button:hover{
