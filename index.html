@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+        <header>
+            <nav>
+                <ul class="navbutton">
+                    <li><a href="#qcon">QUOTE BOX</a></li>
+                    <li><a href="#converter">HERO CONVERTER</a></li>
+                    <li><a href="#calcu">CALCULATOR</a></li>
+                    <li><a href="#magicbox">MAGIC BOX</a></li>
+                </ul>
+            </nav>
+        </header>
+</head>
+<body>
+    <div class="con" id="qcon">
+    <div class="qouta_container">
+        <h2>Quote Box</h2>
+        <div class="qoutebox">
+            <p id="qoute"></p>
+            <small id="author"></small>
+        </div >
+        <button id="qbtn1"></button>
+        <button id="qbtn2"></button>
+        <button id="qbtn3"></button>
+        <button id="qbtn4"></button>
+    </div>
+    </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="converter" id="converter">
+            <div class="inputbox">
+                <h1>Hero Converter</h1>
+                <input type="text" id="inputcell" placeholder="Enter value">
+                <select id="inputUnit"> 
+                    <option value="lbtokg">lb to kg</option>
+                    <option value="kgtolb">kg to lb</option>
+                </select>
+                <button type="submit" id="submit" onclick=hero()>Convert</button>
+                <div class="outputbox">
+                    <input type="text" id="outputcell" disabled>
+                </div>
+            </div>
+    </div>
+    
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="herodiv" id="calcu">
+        <div class="maxmin">
+            <h1>Calculator</h1>
+            <input type="text" id="numin" placeholder="Enter value" oninput="calculator()">
+            <div id="names">
+                <p class="result" id="max">Max: </p>
+                <p class="result" id="min">Min:</p>
+                <p class="result" id="sum">Sum: </p>
+                <p class="result" id="average">Average: </p>
+                <p class="result" id="reverse">Reverse Order: </p>
+            </div>
+        </div>
+    </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="boxmagic" id="magicbox">
+        <div class="magic">
+            <h1>Magic Box</h1>
+            <textarea id="textarea"></textarea>
+            <div class="btnnames">
+                <button type="submit" id="clear" >Clear it</button>
+                <button type="submit" id="caps" >Capitalize</button>
+                <button type="submit" id="sort" >Sort</button>
+                <button type="submit" id="rev" >Reverse</button>
+                <button type="submit" id="strip" >Strip Blank</button>
+                <button type="submit" id="addnum" >Add Numbers</button>
+                <button type="submit" id="shuffle" >Shuffle</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
