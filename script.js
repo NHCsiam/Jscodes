@@ -159,7 +159,10 @@ function hero () {
 
 function calculator(){
   var innum=document.getElementById("numin").value;
-  var num=innum.split(',').map(Number);
+  if(innum.match(/,{2,}/g)){
+    alert('Double comma not allowed')
+  }
+    var num=innum.split(',').map(Number);
   var max=Math.max(...num);
   var min=Math.min(...num);
   var sum=0;
@@ -176,6 +179,9 @@ function calculator(){
   document.getElementById("sum").innerHTML="Sum:"+sum;
   document.getElementById("average").innerHTML="Average: "+avg;
   document.getElementById("reverse").innerHTML="Reverse Order:"+reverse
+
+  
+  
 }
 
 // --------------------------------------------------------------------------
@@ -186,7 +192,11 @@ clrbtn.addEventListener("click",function(){
 });
 //caps
 capbtn.addEventListener("click",function(){
-  textarea.value=textarea.value.toUpperCase()
+  if (textarea.value===textarea.value.toLowerCase()){
+    textarea.value=textarea.value.toUpperCase()
+  }else{
+    textarea.value=textarea.value.toLowerCase()
+  }
 });
 //sort
 sort.addEventListener("click", function() {
